@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+{% include 'studentapp/home.html' %}
+    {% block child_block %}
+        <div class="reg_contain">
+            <div class="reg_form">
+                <h1 id="reg"> Register form </h1>
+                    <form method="post">
+                        {% csrf_token %}
+                        {{form.as_p}}
+                        <input class='btn btn-primary btn-lg' type="submit" value="Register">
+                    </form>
+            </div>
+        </div>
+
+    {% endblock %}

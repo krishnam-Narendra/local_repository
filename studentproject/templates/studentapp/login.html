@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% extends 'studentapp/base.html' %}
+    {% block child_block %}
+        <div class="form_contain">
+            <div class="h1_lg"><h1> Log in Form</h1> </div>
+                <div class="from_page">
+                    <form method="post">
+                        {% csrf_token %}
+                        <label >User Name</label><br/>
+                        <input type="text" name="username" placeholder="User Name" required><br/>
+
+                        <label>Password</label><br/>
+                        <input type="password" name="password" placeholder="Password" required><br/>
+                        <hr class="hr_line">
+                        <button type="submit" class="btn btn-primary btn-lg "><a href="/login">Log in </a> </button>
+
+                        <div class="forgot">
+                            <a href="#">Forgotten Password?</a>Create New
+                            <a href="/register">User</a>
+                        </div>
+
+                    </form>
+
+            </div>
+        </div>
+
+    {% endblock %}

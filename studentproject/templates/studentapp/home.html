@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+{% extends 'studentapp/base.html' %}
+    {% block child_block %}
+        <div class="container">
+            <div class="stdapp">
+                <h1 id="h"> Welcom to Student Appliction </h1>
+            </div>
+        </div>
+            <div class="stdent_getresult" align="center">
+                <form method="post">
+                    {% csrf_token %}
+                    <label>Enter Student RollNo</label>
+                    <input type="text" name="rollno" placeholder="Student Roll Number">
+                    <button type="submit" class="btn btn-primary">Get Results </button>
+                    <button type="submit" class="btn btn-primary">Forgot My Rollno  </button>
+                </form>
+            </div>
+
+    {% if data %}
+        <table>
+            <thead>
+                <th>id</th>
+                <th>Roll No</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Father Name</th>
+                <th>Course</th>
+                <th>Email</th>
+                <th>School Name</th>
+            </thead>
+            {% for d in data %}
+            <tr>
+                <td>{{d.id}}</td>
+                <td>{{d.roolno}}</td>
+                <td>{{d.fname}}</td>
+                <td>{{d.lname}}</td>
+                <td>{{d.father_name}}</td>
+                <td>{{d.course}}</td>
+                <td>{{d.email}}</td>
+                <td>{{d.school_name}}</td>
+            </tr>
+
+            {% endfor %}
+        </table>
+    {% endif%}
+
+    {% endblock %}
+

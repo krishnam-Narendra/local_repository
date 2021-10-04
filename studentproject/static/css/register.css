@@ -1,0 +1,47 @@
+.reg_form{
+margin: 10px 0px 0px 280px ;
+width: 580px;
+}
+.reg_form label{
+font-size: 20px;
+color: #474eeb;
+}
+.reg_form input{
+font-size: 17px;
+width: 280px;
+height: 40px;
+padding: 2 0.5em;
+border-radius: 5px;
+border: 1px solid  gray;
+margin: 0px 0px 0px 79px;
+text-indent: 10px;
+color: #7834f7;
+}
+.reg_form input[type='submit']{
+color: white;
+font-size: 22px;
+}
+.reg_form input[name='fname'],.reg_form input[name='lname']{
+margin: 0px 0px 0px 105px;
+}
+.reg_form input[name='email']{
+margin: 0px 0px 0px 199px;
+}
+.reg_form input[name='father_name']{
+margin: 0px 0px 0px 40px;
+}
+.reg_contain{
+margin: -10px 190px 0px 180px;
+background: #99e92c;
+border-radius: 5px;
+
+}
+#reg{
+text-align: center;
+margin: 0px 0px 40px 0px;
+color: #573b71;
+}
+.reg_form input:focus{
+outline: 0px;
+box-shadow: 0px 1.5px #cacceb;
+}
